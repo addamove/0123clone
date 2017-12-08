@@ -1,0 +1,84 @@
+ .gallery {
+    width: 150px;
+    text-align: center;
+    display:inline-block; 
+    box-sizing: border-box; 
+    position:relative;
+    padding: 10px;
+    
+}
+.Text{
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+ 
+    box-sizing: border-box; 
+    border-radius: 6px;    
+    color:#fff;
+         
+    padding:10px;
+    background-color:rgba(0,0,0,.05);
+    
+}
+
+/* Ссылки и обёртка для картинок */
+.imgLink {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  
+  height: 200px;
+  
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+/* Общие стили для перекрывающих элементов */
+.coverBg,
+.coverTitle {
+  opacity:0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  
+  
+}
+
+/* Отображаем перекрывающие элементы при наведении на блок с картинкой */
+.imgLink:hover .coverBg,
+.imgLink:hover .coverTitle{
+  display: block;
+  transition: 1s;
+  opacity: 0.8;
+  
+  
+}
+
+/* Полупрозрачный перекрывающий голубой фон */
+.coverBg {
+    border-radius: 6px;   
+    
+  background: #1e516d;
+          opacity: 0;
+      
+}
+
+/* Перекрывающий текст */
+.coverTitle {
+ vertical-align: middle;
+ top: 25%;
+  color: rgb(255, 255, 255);
+  font-size: 120%;
+  text-align: center;
+  text-transform: uppercase;
+    
+}
