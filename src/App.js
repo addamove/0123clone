@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import Content from './containers/Content/Content'
+import React, { Component } from "react";
+import HomePage from "./containers/HomePage/HomePage";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Content/>
+        <MuiThemeProvider>
+          <HomePage />
+        </MuiThemeProvider>
       </div>
     );
   }

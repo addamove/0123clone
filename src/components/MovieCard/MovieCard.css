@@ -19,7 +19,24 @@
     color:#fff;
          
     padding:10px;
-    background-color:rgba(0,0,0,.05);
+    background:linear-gradient(to top, #000000, #ffffff00);
+    
+    
+}
+.TextHD{
+    display:block;
+    position:absolute;
+    right:5px;
+    top:5px;
+    width:25%;
+    font-size: 14px;
+ 
+    box-sizing: border-box; 
+    border-radius: 6px;    
+    color:rgb(0, 0, 0);
+         
+    padding:1px;
+    background-color:rgb(254, 215, 9);
     
 }
 
@@ -34,10 +51,13 @@
 }
 
 .img {
+  
   width: 100%;
   height: 100%;
   border-radius: 6px;
 }
+img {
+  object-fit: cover;}
 
 /* Общие стили для перекрывающих элементов */
 .coverBg,
@@ -57,7 +77,7 @@
 .imgLink:hover .coverBg,
 .imgLink:hover .coverTitle{
   display: block;
-  transition: 1s;
+  transition: 0.75s;
   opacity: 0.8;
   
   
@@ -67,7 +87,7 @@
 .coverBg {
     border-radius: 6px;   
     
-  background: #1e516d;
+  background: rgb(29, 80, 108);
           opacity: 0;
       
 }
@@ -81,4 +101,10 @@
   text-align: center;
   text-transform: uppercase;
     
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    width: 50%;
+  }
 }

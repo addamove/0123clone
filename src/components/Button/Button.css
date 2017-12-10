@@ -1,0 +1,38 @@
+.Button {
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px 8px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.Button:first-of-type {
+    margin-left: 0;
+
+    
+    padding-left: 0;
+}
+
+.Button:disabled {
+    cursor: default; 
+   background-color: rgb(122, 122, 122);
+}
+.Button:hover {
+    cursor: pointer; 
+   background-color: rgba(122, 122, 122, 0.329);
+   transition: all linear 0.75s;
+}
+
+.Primary {
+    color: rgb(65, 65, 65);
+    
+}
+
+.Danger {
+    color: #944317;
+}

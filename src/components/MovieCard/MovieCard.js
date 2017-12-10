@@ -1,30 +1,31 @@
-import React from 'react'
-import poster from '../../assets/poster1.jpg'
-import classes from './MovieCard.css'
-import FaPlay from 'react-icons/lib/fa/play'
+import React from "react";
+import classes from "./MovieCard.css";
+import FaPlay from "react-icons/lib/fa/play";
 
-const movieCard = () => {
-    return (
-        <div className={classes.gallery}>
-            <a href="#1" className={classes.imgLink }>
-            <img src={poster} alt="Картинка 1" className={classes.img} width="300" height="130" />
-            <div className={classes.coverBg }></div>
-            <p className={classes.coverTitle}><FaPlay  size={42} /></p>
-            <div className={classes.Text}>  <span>MovieName</span>  </div>
-            </a>
+const movieCard = props => {
+  return (
+    <div className={classes.gallery}>
+      <a href="#1" className={classes.imgLink}>
+        <img
+          src={"https://image.tmdb.org/t/p/w300/" + props.poster_path}
+          alt={props.title}
+          className={classes.img}
+        />
+        <div className={classes.coverBg} />
+        <p className={classes.coverTitle}>
+          <FaPlay size={42} />
+        </p>
+        <div className={classes.Text}>
+          {" "}
+          <span>{props.title}</span>{" "}
         </div>
-        // <div className={classes.Card}>
-        //     <div className={classes.Wrapper}>
-        //         <p>Play</p>
-        //         <img src={poster} alt="poster"/>
-        //         
-              
-        //     </div>
-            
-        // </div>
-    );
-}
-
-
+        <div className={classes.TextHD}>
+          {" "}
+          <span>HD</span>{" "}
+        </div>
+      </a>
+    </div>
+  );
+};
 
 export default movieCard;
